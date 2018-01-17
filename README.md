@@ -15,14 +15,14 @@
 
 ## Usage
 
-- Launch your own development environment from the project's root folder:
+- Launch the app:
 ```
 $ ./go up
 ```
 
 - Initialize the database:
 ```
-$ ./go up
+$ ./go db
 ```
 
 - Edit your hosts file to include the following lines (it can be usually found at `/etc/hosts`):
@@ -33,7 +33,7 @@ $ ./go up
 By default, the game is available at **https://www.olympics.localhost**. You can log in with the following credentials:
 
 - username: `athlete`
-- passowrd: `password`
+- password: `password`
 
 ### Contributing
 
@@ -41,4 +41,4 @@ Please see [CONTRIBUTING](CONTRIBUTING) for details.
 
 ## License
 
-Proprietary. Please see the [License File](LICENSE) for more information.
+MIT. Please see the [License File](LICENSE) for more information.
