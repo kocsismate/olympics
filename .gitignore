@@ -1,0 +1,7 @@
+# Excluded files
+/.env
+*.bak
+
+# Excluded folders
+/vendor/
+/web/assets/

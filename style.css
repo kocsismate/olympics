@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+*                  {z-index: -1; font-family: "Segoe UI", Tahoma, sans-serif;}
+body        	     {width: 100%; height: 100%; padding: 0px; margin: 0px; overflow: auto; }
+
+a                  {text-decoration: none; color: #333;}
+h1                 {float: left; margin: 10px 5px 0px 10px; padding: 0px; clear: none; font-weight: 500; display:inline; font: Tahoma, Geneva, sans-serif; font-size: 21px;}
+h3                 {margin: 5px 0px 5px 20px; padding: 0px; font-size: 16px; font-weight: 600; color: #09C; clear: none; display:inline;}
+h5                 {margin: 30px 0px 0px 0px; clear: none; display:inline; float: left; }
+th								 {text-align: left; padding-top: 5px;}
+a:hover            {cursor: pointer; color: #black;}
+header             {width: 100%; height: 58px;}
+input[type=text], input[type=email], input[type=password], input[type=datetime], input[type=number], select {font-size: 16px; height: 20px; width: 200px; margin: 3px 8px 3px 0px}
+select             {height: 23px; width: 205px;}
+input[type=button] {font-size: 16px; height: 25px; width: 120px; margin: 3px 8px 3px 0px; font-family: arial, sans-serif;}
+input:focus        {-webkit-transition: background-color 0.55s linear; -mozilla-transition:background-color 0.55s linear; -o-transition:color 0.55s ease-in; -transition:background-color 0.55s linear; background: #FF9;}
+
+
+div#headerLogo                              {float: left; width: 400px;}
+div#headerLogo img                          {float: left; width: 100px;}
+div#headerInfo                              {float: right; margin: 20px 10px 0px 0px; display: none; opacity: 0.0; background-position:center; background-repeat:no-repeat;-moz-transition: opacity 3s; -webkit-transition: opacity 3s;-o-transition: opacity 3s; transition: opacity 3s;}
+div#headerInfo > *                          {float: left;}
+a#headerUsername                          	{margin-right: 30px;}
+div#headerUserFunctions > a                 {margin: 0px 7px 5px 7px; -webkit-transition: color .45s ease-in; -moz-transition: color .45s ease-in; transition: color .45s ease-in; -o-transition: color .45s ease-in;}
+div#headerUserFunctions > a:hover           {color: #F03;}
+a#headerLoginButton, a#headerRegisterButton {font-size: 15px; margin: 0px 7px 5px 7px; transition: all 0.4s;-o-transition: all 0.4s;-webkit-transition: all 0.4s;-firefox-transition: all 0.4s;}
+a#headerAudioControl                        {}
+section#loginBox, section#registerBox, section#profileBox, section#trainingBox, section#competitionBox, section#topListBox, section#settingsBox {
+	display: none; z-index: 4; position: relative; overflow: auto;
+	border: 1px solid #9d9d9d; background-color:#EFEFEF; width: 780px;
+	border-radius: 6px; padding: 5px 5px; float: right; opacity: 0.97;
+	-webkit-transition: all .7s; -moz-transition: all .7s; transition: all .7s;}
+section#competitionBox {max-height: 390px; min-height: 220px;}
+section#topListBox {height: 450px; min-height: 450px; max-height: 450px; padding-top: 10px; }
+table.topListTable, table.competitionInfoTable  {margin: 0px 15px 17px 60px; width: 700px; border: none; min-height: 50px;}
+table.profileTable {margin: 0px 15px 20px 20px; border: none; min-height: 50px;}
+table.profileTable tr > td:first-child {padding-left: 30px;}
+div#registerResult {width: 560px; float: left; color: red;}
+div#loginResult    {float: left; color: red; margin: 5px 0px 0px 5px;}
+table#trainingTable, table#competitionChooserTable {width: 780px;}
+table.competitionInfoTable td         {margin: 0px; padding: 0px;}
+table.competitionInfoTable tr         {height: 15px; margin: 0px; padding: 0px;}
+table.competitionInfoTable input[type=button] {margin: 0px 0px 0px 10px; width: 155px; float: right;}
+table#competitionOwnResultsTable      {background-color: #FC3; padding: 0px; border: 1px solid black; margin-bottom: 0px;}
+table#competitionOwnResultsTable td   {width: 16%; padding: 1px 0px; text-align: center; border-left: 1px solid black; margin: 0px;}
+table#competitionOwnResultsTable tr > td:first-child {border-left: none;}
+td#trainingResult, td#competitionResult  {color: red; width: 500px;}
+input#competeButton, input#restartCompetitionButton input#exitCompetitionButton, input#loginButton, input#registerButton {width: 140px; float: right;}
+footer             {width: 100%; height: 40px; text-align: center; display: block; position: absolute; top: 550px}
+#gameCanvas        {width: 100%; height: 480px; position: absolute; display: block; border-width: 1px 0px; border-style: solid; border-color: black;
+										background-image: url('images/stadium.jpg'); opacity: 0.0; background-position:center; background-repeat:no-repeat;
+										-moz-transition: opacity 3s; -webkit-transition: opacity 3s;
+										-o-transition: opacity 3s; transition: opacity 3s;}
+#videoPlayer	   	 {display: none; position: absolute; overflow: auto; z-index: 2; top: 60px; left: 0px; width: 100%; height: 480px; background: black;}
+#skipIntro         {position: relative; z-index: 3; top: 450px; left: 0px; width: 100%;}
+#skipIntro a       {float: right; z-index: 3; padding: 5px 20px; font-weight: 600; font-size: 16px; color: white; background: black; opacity: 0.95;}

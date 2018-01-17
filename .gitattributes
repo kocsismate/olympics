@@ -1,0 +1,50 @@
+# Handle line endings automatically for files detected as text
+# and leave all files detected as binary untouched.
+* text eol=lf
+
+# These files are text and should be normalized
+*.php text diff=php
+*.css text
+*.js text
+*.htm text diff=html
+*.html text diff=html
+*.json text
+*.xml text
+*.yml text
+*.sh text eol=lf
+*.sql text
+*.po text
+*.txt text
+*.md text
+*.twig text
+*.ini text
+*.inc text
+*.tf text
+*.tfvars text
+*.dist text
+go text eol=lf
+composer.lock text
+Dockerfile text
+
+# These files are text should have Windows-style line endings
+.bat text eol=crlf
+
+# These files are binary and should be left untouched
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.mov binary
+*.mp4 binary
+*.mp3 binary
+*.flv binary
+*.fla binary
+*.swf binary
+*.gz binary
+*.zip binary
+*.7z binary
+*.mwb binary
+*.mo binary
+*.ttf binary
+*.pdf binary

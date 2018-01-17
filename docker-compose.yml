@@ -1,0 +1,39 @@
+version: '2'
+
+services:
+    olympics-nginx:
+        image: fholzer/nginx-brotli:v1.13.7
+        container_name: olympics-nginx
+        ports:
+            - "80:80"
+            - "443:443"
+        volumes:
+            - .:/code
+        env_file:
+            - .env
+        command: /bin/sh -c "$$PROJECT_ROOT/app/build/nginx/run.sh"
+        depends_on:
+            - olympics-php-fpm
+
+    olympics-php-fpm:
+        image: woohoolabs/php:4.2.3
+        container_name: olympics-php-fpm
+        volumes:
+            - .:/code
+        env_file:
+            - .env
+        command: /bin/bash -c "$$PROJECT_ROOT/app/build/php-fpm/run.sh"
+
+    olympics-mysql:
+        container_name: olympics-mysql
+        image: mysql:5.7.19
+        ports:
+            - "3306:3306"
+        volumes:
+            - mysql-data:/var/lib/mysql
+        env_file:
+            - .env
+
+volumes:
+    mysql-data:
+        driver: local
