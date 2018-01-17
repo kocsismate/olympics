@@ -2,7 +2,7 @@
 
 ![Screenhot](screenshot.jpg)
 
-**Do no use the app in production, because it contains serious security vulnerabilities!**
+**Do no use the app in production, it contains serious security vulnerabilities!**
 
 ## Install
 
