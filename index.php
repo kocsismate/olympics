@@ -2,7 +2,7 @@
 	session_start();
 	header('Content-Type: text/html; charset=utf-8');
 	include_once("common.php");
-	
+
 	if(isset($_COOKIE['email']) === false)
 		$_COOKIE['email']= "";
 	if(isset($_COOKIE['password']) === false)
@@ -16,7 +16,7 @@
 <html lang="en">
 	<head>
 		<title>Stickman Olympics 2012 beta</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="StyleSheet" href="style.css" type="text/css" media="screen">
     <script type="text/javascript" src="common.js"></script>
     <script type="text/javascript" src="athlete.js"></script>
@@ -51,12 +51,12 @@
 			}
 			echo "</div>";
 			echo "</header>";
-			
+
 			if(isset($_SESSION['id']) && $_SESSION['id'] >= 1) {
 				echo "<section id='profileBox'>";
 				echo getProfile($_SESSION['id']);
 				echo "</section>";
-			
+
 				echo "<section id='trainingBox'>";
 				echo "<table id='trainingTable'>";
 				echo "<tr><td style='width: 170px'><i>Choose a training type:</i></td><td></td><td></td></tr>";
@@ -70,22 +70,20 @@
 				echo "<tr><td></td><td id='trainingResult'></td><td><input id='trainButton' type='button' value='go training' onclick='javascript:train()'/></td></tr>";
 				echo "</table>";
 				echo "</section>";
-			
+
 				echo "<section id='competitionBox'>";
 				echo getCompetitionChooser();
 				echo "</section>";
-			
+
 				echo "<section id='topListBox'>";
 				include("toplist.php");
 				echo "</section>";
-				
+
 				echo "<section id='settingsBox'>";
 				echo "<table id='settingsTable'>";
-				echo "<tr><td width='200'>email:</td><td><input id='settingsTableEmail' type='email' placeholder='your email address' value='".$_SESSION["email"]."'/></td></tr>";
+				echo "<tr><td width='200'>email:</td><td><input id='settingsTableEmail' type='text' placeholder='your email address' value='".$_SESSION["email"]."'/></td></tr>";
 				echo "<tr><td>password:</td><td><input id='settingsTablePassword' type='password' placeholder='your password' value='".$_SESSION["password"]."'/></td><td></td></tr>";
 				echo "<tr><td>password again:</td><td><input id='settingsTablePassword2' type='password' value='".$_SESSION["password"]."'/></td><td></td></tr>";
-				//echo "<tr><td>name:</td><td><input id='settingsTableFirstname' type='text' placeholder='your name' value='".$_SESSION["firstname"]."'/> <input id='settingsTableSurname' type='text' placeholder='your surname' value='".$_SESSION["surname"]."'/></td><td></td></tr>";
-				//echo "<tr><td>country:</td><td><input id='settingsTableCountry' type='text' placeholder='your country' value='".$_SESSION["countryName"]."'/></td><td></td></tr>";
 				echo "<tr><td>registration:</td><td><input id='settingsTableRegistrerTime' type='datetime' disabled='disabled' value='".date("m/d/y g:i A", $_SESSION["registerTime"])."'/></td><td></td></tr>";
 				echo "<tr><td>competitions:</td><td><input id='settingsTableCompetitionNumber' type='number' disabled='disabled' value='".$_SESSION["competitionNumber"]."'/></td><td></td></tr>";
 				echo "</table>";
@@ -95,16 +93,16 @@
 				echo "<section id='loginBox'>";
 				echo "<div style='float: left;'><form autocomplete='on' method='POST' action='javascript: login();'>";
 				echo "<input id='function' type='hidden' value='login'/>";
-				echo "<input id='loginEmail' type='email' placeholder='email' autofocus='autofocus' />";
+				echo "<input id='loginEmail' type='text' placeholder='email' autofocus='autofocus' />";
 				echo "<input id='loginPassword' type='password' placeholder='password'/>";
 				echo "<label for='loginAutoLogin'>auto-login</label> <input id='loginAutoLogin' type='checkbox' value='".($_COOKIE['autoLogin'] == true? "checked" : "none")."'/></div>";
 				echo "<div id='loginResult'></div>";
 				echo "<input id='loginButton' type='submit' value='Login'/></form>";
 				echo "</section>";
-			
+
 				echo "<section id='registerBox'>";
 				echo "<table id='registerTable'>";
-				echo "<tr><td width='85'>email</td><td><input id='registerEmail' type='email' maxlength='128'/></td><td><div id='registerEmailCheck'></div></td></tr>";
+				echo "<tr><td width='85'>email</td><td><input id='registerEmail' type='text' maxlength='128'/></td><td><div id='registerEmailCheck'></div></td></tr>";
 				echo "<tr><td>password</td><td><input id='registerPassword' type='password' maxlength='64'/></td><td><div id='registerPasswordCheck'></div></td></tr>";
 				echo "<tr><td>name</td><td><input id='registerFirstname' type='text' placeholder='Firstname' maxlength='64'/></td><td><input id='registerSurname' type='text' placeholder='Surname' maxlength='64'/></td></tr>";
 				echo "<tr><td>country</td><td><select id='registerCountry'>";
