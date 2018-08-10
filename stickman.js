@@ -6,8 +6,8 @@
 		if(canvas.getContext){
 			context = canvas.getContext("2d");
 			with(canvas){
-				setAttribute("width", w - 6)
-				setAttribute("height", h - 6)
+				setAttribute("width", w - 6);
+				setAttribute("height", h - 6);
 			}
 			with(context){
 				clearRect(0, 0, w, h);

@@ -121,14 +121,14 @@ function initializePage() {
 	if(video != null)
 		video.onended= function() {
 			buildPage();
-		}
+		};
 	if(!window.sessionStorage || !window.localStorage || !isCanvasSupported)
 		document.getElementById("log").innerHTML= "<span style='color: red; font-weight: 600; background: white;'>Your browser seems to be incompatible. Consider using a modern browser like Google Chrome or Opera!</span>";
 	
 	if(readCookie("audio") == null) {
 		document.getElementById("headerInfo").style.display= "none";
 		document.getElementById("headerInfo").style.opacity= "0";
-		document.getElementById('gameCanvas').style.display= 'none';
+        document.getElementById('gameCanvas').style.display= 'none';
 		video.style.display= 'block';
 		video.play();
 	}
@@ -141,11 +141,12 @@ function initializePage() {
 
 var mediumTermTiming= function() {
 	//setInterval(function() {ajaxRequest("ajax.php", "function=printTrainingTime", "trainingTime", "");}, 20000);
-}
+};
 
 var longTermTiming= function() {
-	setInterval(function() {ajaxRequest("ajax.php", "function=refreshTopList", "topListBox", "");ajaxRequest("ajax.php", "function=refreshProfile", "profileBox", ""); ajaxRequest("ajax.php", "function=printTrainingTime", "trainingTime", "");}, 500000);
-}
+	setInterval(function() {ajaxRequest("ajax.php", "function=refreshTopList", "topListBox", "");
+	ajaxRequest("ajax.php", "function=refreshProfile", "profileBox", ""); ajaxRequest("ajax.php", "function=printTrainingTime", "trainingTime", "");}, 500000);
+};
 
 function selectExercise(exercise) {
 	for(var i=0; i < 5; i++)

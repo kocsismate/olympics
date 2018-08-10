@@ -128,7 +128,7 @@
 				echo "</section>";
 			}
 			echo "<canvas id='gameCanvas'></canvas>";
-			echo "<video id='videoPlayer'>";
+			echo "<video id='videoPlayer' allow='autoplay'>";
 			echo "<source src='video/intro.webm' type='video/webm'>";
     	echo "<source src='video/intro.mp4' type='video/mp4'>";
 			echo "</video>";
